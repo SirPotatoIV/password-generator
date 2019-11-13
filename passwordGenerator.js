@@ -8,4 +8,13 @@
 // Select characters from arrays and combine them into a password
     // Use a loop to continue selecting characters from different arrays at random and updating the let password.
     // The loop will end when when the length the user selected (should be stored in a const) is reached.
+    let userPassword = "";
+    let randomChar = "a";
+    
+    function characterSelector() {
+        userPassword = userPassword + randomChar;
+        console.log(userPassword);
+    }
+
+    characterSelector();
 // Updated the html of a box (probably a jumbotron) so that the text in said box is the password
