@@ -1,7 +1,7 @@
 // Define all possible characters that can be used in the password. Separate the characters in arrays by option types the user will get.
 // APPEARS THAT THIS STRATEGY WON'T WORK const characterArrays = ["specialCharacters", "numCharacters",];
 // Used to store the names of the character types the user has selected. This will be used to figure out what characters characterSelector should use.
-const selectedCharTypes = ["specialCharacters", "numCharacters", "lowerCharacters",];
+const selectedCharTypes = ["specialCharacters", "numCharacters", "lowerCharacters", "upperCharacters"];
 const specialCharacters = ["!", "#", "$", "+", "?", "@", "%",];
 const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
 const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -70,17 +70,18 @@ const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', '
         if(sc > -1) {
             userPassword = userPassword + randomChar;
             console.log(userPassword, "if");
-            // i++;
         };
         if(num > -1) {
             userPassword = userPassword + randomNum;
             console.log(userPassword, "if");
-            // i++;
         };
-        if(num > -1) {
+        if(low > -1) {
             userPassword = userPassword + randomLower;
             console.log(userPassword, "if");
-            // i++;
+        };
+        if(up > -1) {
+            userPassword = userPassword + randomUpper;
+            console.log(userPassword, "if");
         };
         // The purpose of this loop is to combine the user required number of characters into userPassword.
         for(i = 0; i < loopLength;) {
@@ -102,13 +103,21 @@ const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', '
             const lowerIndex = Math.floor(Math.random()*lowerCharactersLength);
             // console.log(lowerCharactersLength, lowerIndex);
 
+            // Finds the length of the array upperCharacters
+            const upperCharactersLength = upperCharacters.length;
+            // Creates a random index location for upperCharacters
+            const upperIndex = Math.floor(Math.random()*upperCharactersLength);
+            // console.log(upperCharactersLength, upperIndex);
+
             let randomChar = specialCharacters[specialIndex];
             console.log("Random special Character: ", randomChar);
             let randomNum = numCharacters[numIndex];
             console.log("Random number Character:", randomNum);
             let randomLower = lowerCharacters[lowerIndex];
             console.log("Random number Character:", randomLower);
-
+            let randomUpper = upperCharacters[upperIndex];
+            console.log("Random number Character:", randomUpper);
+            
             if(sc > -1 && i < loopLength) {
                 userPassword = userPassword + randomChar;
                 console.log(userPassword, "Loop 2", i);
