@@ -11,15 +11,15 @@ const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
 // Create a let that will be a random selector for a character in the randomly selected array.
 // APPEARS THAT THIS STRATEGY WON'T WORK const arraySelector = characterArrays[0];
 // console.log(arraySelector);
-const specialCharactersLength = specialCharacters.length;
-const specialIndex = Math.floor(Math.random()*specialCharactersLength);
-console.log(specialCharactersLength, specialIndex);
-
-const numCharactersLength = numCharacters.length;
-const numIndex = Math.floor(Math.random()*numCharactersLength);
-console.log(numCharactersLength, numIndex);
 
 // Create a let that will store the set of randomly selected characters that will amount to a password.
+    const specialCharactersLength = specialCharacters.length;
+    const specialIndex = Math.floor(Math.random()*specialCharactersLength);
+    console.log(specialCharactersLength, specialIndex);
+
+    const numCharactersLength = numCharacters.length;
+    const numIndex = Math.floor(Math.random()*numCharactersLength);
+    console.log(numCharactersLength, numIndex);
 // Select characters from arrays and combine them into a password
     // Use a loop to continue selecting characters from different arrays at random and updating the let password.
     // The loop will end when when the length the user selected (should be stored in a const) is reached.
