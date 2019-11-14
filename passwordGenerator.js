@@ -41,6 +41,8 @@ const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', '
     console.log("Random special Character: ", randomChar);
     let randomNum = numCharacters[numIndex];
     console.log("Random number Character:", randomNum);
+    let randomLower = lowerCharacters[lowerIndex];
+    console.log("Random number Character:", randomLower);
     // Used to see if specialCharacters is a character type picked by the user. Used in the function characterSelector.
     let sc = selectedCharTypes.indexOf("specialCharacters");
     console.log("Does user want a special character?: ", sc);
