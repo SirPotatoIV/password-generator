@@ -5,9 +5,21 @@ const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', '
 const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
 // Define a const for each requirement the user can select.
+    let selectedCharTypes = [];
+    const hasSpecial = true;
+    const hasNum = false;
+    const hasLower = false;
+    const hasUpper = false;
+    let userLength = 8;
+
+    if (hasSpecial === true) {
+        selectedCharTypes = selectedCharTypes + "specialCharacters";
+    }
+    console.log("Character types selected: ", selectedCharTypes);
+
     // Used to store the names of the character types the user has selected. This will be used to figure out what characters characterSelector should use.
-    const selectedCharTypes = ["specialCharacters", "numCharacters", "lowerCharacters", "upperCharacters"];
-    let passwordLength = 10;
+    // const selectedCharTypes = ["specialCharacters", "numCharacters", "lowerCharacters", "upperCharacters"];
+    let passwordLength = userLength;
     const loopLength = passwordLength - selectedCharTypes.length;
     console.log("Calculated Number of Loops", loopLength);
 
@@ -113,39 +125,37 @@ const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', '
             let rand = Math.floor(Math.random()*4);
 
             let randomChar = specialCharacters[specialIndex];
-            console.log("Random special Character: ", randomChar);
+            // console.log("Random special Character: ", randomChar);
             let randomNum = numCharacters[numIndex];
-            console.log("Random number Character:", randomNum);
+            // console.log("Random number Character:", randomNum);
             let randomLower = lowerCharacters[lowerIndex];
-            console.log("Random number Character:", randomLower);
+            // console.log("Random number Character:", randomLower);
             let randomUpper = upperCharacters[upperIndex];
-            console.log("Random number Character:", randomUpper);
+            // console.log("Random number Character:", randomUpper);
 
             if(sc > -1 && i < loopLength && rand === 0) {
                 userPassword = userPassword + randomChar;
-                console.log(userPassword, "Loop", i);
+                // console.log(userPassword, "Loop", i);
                 i++;
             };
             if(num > -1 && i < loopLength && rand === 1) {
                 userPassword = userPassword + randomNum;
-                console.log(userPassword, "Loop", i);
+                // console.log(userPassword, "Loop", i);
                 i++;
             };
             if(low > -1 && i < loopLength && rand === 2) {
                 userPassword = userPassword + randomLower;
-                console.log(userPassword, "Loop", i);
+                // console.log(userPassword, "Loop", i);
                 i++;
             };
             if(up > -1 && i < loopLength && rand === 3) {
                 userPassword = userPassword + randomUpper;
-                console.log(userPassword, "Loop", i);
+                // console.log(userPassword, "Loop", i);
                 i++;
             };
 
         }
-        console.log("Total loops: ",i ,"and Password Length: ", userPassword.length);
+        console.log("Password: ", userPassword, "Total loops: ",i , "Password Length: ", userPassword.length);
     }
-
-
+    
     characterSelector();
-// Updated the html of a box (probably a jumbotron) so that the text in said box is the password
