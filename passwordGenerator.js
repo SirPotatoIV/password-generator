@@ -66,6 +66,11 @@ const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', '
                     console.log(userPassword, "Loop 1");
                     i++;
                 };
+                if(num > -1) {
+                    userPassword = userPassword + randomLower;
+                    console.log(userPassword, "Loop 1");
+                    i++;
+                };
             }
                 userPassword = userPassword + randomChar;
                 console.log(userPassword, "Loop 2");
