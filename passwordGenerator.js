@@ -1,9 +1,10 @@
 // Define all possible characters that can be used in the password. Separate the characters in arrays by option types the user will get.
 // APPEARS THAT THIS STRATEGY WON'T WORK const characterArrays = ["specialCharacters", "numCharacters",];
 // Used to store the names of the character types the user has selected. This will be used to figure out what characters characterSelector should use.
-const selectedCharTypes = ["specialCharacters", "numCharacters",];
+const selectedCharTypes = ["specialCharacters", "numCharacters", "lowerCharacters",];
 const specialCharacters = ["!", "#", "$", "+", "?", "@", "%",];
 const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
+const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 // Define a const for each character type that will store the users criteria
 // Get users password criteria and store it in the consts
     // Validate that the user has selected at least one character type.
@@ -13,13 +14,23 @@ const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
 // console.log(arraySelector);
 
 // Create a let that will store the set of randomly selected characters that will amount to a password.
+    // Finds the length of the array specialCharacters
     const specialCharactersLength = specialCharacters.length;
+    // Creates a random index location for specialCharacters
     const specialIndex = Math.floor(Math.random()*specialCharactersLength);
     console.log(specialCharactersLength, specialIndex);
 
+    // Finds the length of the array numCharacters
     const numCharactersLength = numCharacters.length;
+    // Creates a random index location for numCharacters
     const numIndex = Math.floor(Math.random()*numCharactersLength);
     console.log(numCharactersLength, numIndex);
+
+    // Finds the length of the array lowerCharacters
+    const lowerCharactersLength = lowerCharacters.length;
+    // Creates a random index location for lowerCharacters
+    const lowerIndex = Math.floor(Math.random()*lowerCharactersLength);
+    console.log(lowerCharactersLength, lowerIndex);
 // Select characters from arrays and combine them into a password
     // Use a loop to continue selecting characters from different arrays at random and updating the let password.
     // The loop will end when when the length the user selected (should be stored in a const) is reached.
