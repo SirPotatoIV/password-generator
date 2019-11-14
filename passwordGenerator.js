@@ -5,6 +5,7 @@ const selectedCharTypes = ["specialCharacters", "numCharacters", "lowerCharacter
 const specialCharacters = ["!", "#", "$", "+", "?", "@", "%",];
 const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
 const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 // Define a const for each character type that will store the users criteria
 // Get users password criteria and store it in the consts
     // Validate that the user has selected at least one character type.
@@ -32,6 +33,13 @@ const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', '
     const lowerIndex = Math.floor(Math.random()*lowerCharactersLength);
     // console.log(lowerCharactersLength, lowerIndex);
 
+    // Finds the length of the array upperCharacters
+    const upperCharactersLength = upperCharacters.length;
+    // Creates a random index location for upperCharacters
+    const upperIndex = Math.floor(Math.random()*upperCharactersLength);
+    // console.log(upperCharactersLength, upperIndex);
+
+
 // Select characters from arrays and combine them into a password
     // Use a loop to continue selecting characters from different arrays at random and updating the let password.
     // The loop will end when when the length the user selected (should be stored in a const) is reached.
@@ -45,6 +53,8 @@ const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', '
     console.log("Random number Character:", randomNum);
     let randomLower = lowerCharacters[lowerIndex];
     console.log("Random number Character:", randomLower);
+    let randomUpper = upperCharacters[upperIndex];
+    console.log("Random number Character:", randomUpper);
     // Used to see if specialCharacters is a character type picked by the user. Used in the function characterSelector.
     let sc = selectedCharTypes.indexOf("specialCharacters");
     console.log("Does user want a special character?: ", sc);
