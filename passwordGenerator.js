@@ -7,18 +7,30 @@ const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', '
 // Define a const for each requirement the user can select.
     let selectedCharTypes = [""];
     const hasSpecial = true;
-    const hasNum = false;
-    const hasLower = false;
-    const hasUpper = false;
+    const hasNum = true;
+    const hasLower = true;
+    const hasUpper = true;
     let userLength = 8;
     let arrayLocation = selectedCharTypes.length - 1;
 
     if (hasSpecial === true) {
+        arrayLocation = selectedCharTypes.length
+        selectedCharTypes[arrayLocation] = "specialCharacters";
+    }
+    console.log("Character types selected: ", selectedCharTypes);
+    if (hasSpecial === true) {
+        arrayLocation = selectedCharTypes.length
         selectedCharTypes[arrayLocation] = "numCharacters";
     }
     console.log("Character types selected: ", selectedCharTypes);
     if (hasSpecial === true) {
-        selectedCharTypes[arrayLocation] = "numCharacters";
+        arrayLocation = selectedCharTypes.length
+        selectedCharTypes[arrayLocation] = "lowerCharacters";
+    }
+    console.log("Character types selected: ", selectedCharTypes);
+    if (hasSpecial === true) {
+        arrayLocation = selectedCharTypes.length
+        selectedCharTypes[arrayLocation] = "upperCharacters";
     }
     console.log("Character types selected: ", selectedCharTypes);
 
