@@ -120,22 +120,22 @@ const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', '
             
             if(sc > -1 && i < loopLength) {
                 userPassword = userPassword + randomChar;
-                console.log(userPassword, "Loop 2", i);
+                console.log(userPassword, "Loop", i);
                 i++;
             };
             if(num > -1 && i < loopLength) {
                 userPassword = userPassword + randomNum;
-                console.log(userPassword, "Loop 2", i);
+                console.log(userPassword, "Loop", i);
                 i++;
             };
-            if(num > -1 && i < loopLength) {
+            if(low > -1 && i < loopLength) {
                 userPassword = userPassword + randomLower;
-                console.log(userPassword, "Loop 2", i);
+                console.log(userPassword, "Loop", i);
                 i++;
             };
-            if(num > -1 && i < loopLength) {
+            if(up > -1 && i < loopLength) {
                 userPassword = userPassword + randomUpper;
-                console.log(userPassword, "Loop 2", i);
+                console.log(userPassword, "Loop", i);
                 i++;
             };
 
