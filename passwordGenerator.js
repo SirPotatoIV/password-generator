@@ -39,7 +39,7 @@ console.log(numCharactersLength, numIndex);
         // The purpose of this loop is to combine the user required number of characters into userPassword.
         for(i = 0; i < passwordLength; i++) {
             // The purpose of this loop is to ensure that one character from each selected character type is selected.
-            for(i = i; i < 4; i++) {
+            for(i = i; i < 4;) {
                 if(sc > -1) {
                     userPassword = userPassword + randomChar;
                     console.log(userPassword, "Loop 1");
