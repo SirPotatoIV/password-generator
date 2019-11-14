@@ -5,22 +5,27 @@ const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', '
 const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
 // Define a const for each requirement the user can select.
-    let selectedCharTypes = [];
+    let selectedCharTypes = [""];
     const hasSpecial = true;
     const hasNum = false;
     const hasLower = false;
     const hasUpper = false;
     let userLength = 8;
+    let arrayLocation = selectedCharTypes.length - 1;
 
     if (hasSpecial === true) {
-        selectedCharTypes = selectedCharTypes + "specialCharacters";
+        selectedCharTypes[arrayLocation] = "numCharacters";
+    }
+    console.log("Character types selected: ", selectedCharTypes);
+    if (hasSpecial === true) {
+        selectedCharTypes[arrayLocation] = "numCharacters";
     }
     console.log("Character types selected: ", selectedCharTypes);
 
     // Used to store the names of the character types the user has selected. This will be used to figure out what characters characterSelector should use.
     // const selectedCharTypes = ["specialCharacters", "numCharacters", "lowerCharacters", "upperCharacters"];
     let passwordLength = userLength;
-    const loopLength = passwordLength - selectedCharTypes.length;
+    const loopLength = userLength - selectedCharTypes.length;
     console.log("Calculated Number of Loops", loopLength);
 
 // Get users password criteria and store it in the consts
