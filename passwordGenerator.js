@@ -18,24 +18,26 @@ const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', '
     const specialCharactersLength = specialCharacters.length;
     // Creates a random index location for specialCharacters
     const specialIndex = Math.floor(Math.random()*specialCharactersLength);
-    console.log(specialCharactersLength, specialIndex);
+    // console.log(specialCharactersLength, specialIndex);
 
     // Finds the length of the array numCharacters
     const numCharactersLength = numCharacters.length;
     // Creates a random index location for numCharacters
     const numIndex = Math.floor(Math.random()*numCharactersLength);
-    console.log(numCharactersLength, numIndex);
+    // console.log(numCharactersLength, numIndex);
 
     // Finds the length of the array lowerCharacters
     const lowerCharactersLength = lowerCharacters.length;
     // Creates a random index location for lowerCharacters
     const lowerIndex = Math.floor(Math.random()*lowerCharactersLength);
-    console.log(lowerCharactersLength, lowerIndex);
+    // console.log(lowerCharactersLength, lowerIndex);
 
 // Select characters from arrays and combine them into a password
     // Use a loop to continue selecting characters from different arrays at random and updating the let password.
     // The loop will end when when the length the user selected (should be stored in a const) is reached.
-    const passwordLength = 8;
+    let passwordLength = 8;
+    const loopLength = passwordLength - 1;
+    console.log("Calculated Number of Loops", loopLength);
     let userPassword = "";
     let randomChar = specialCharacters[specialIndex];
     console.log("Random special Character: ", randomChar);
@@ -53,29 +55,45 @@ const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', '
     
     function characterSelector() {
         // The purpose of this loop is to combine the user required number of characters into userPassword.
-        for(i = 0; i < passwordLength; i++) {
+        for(i = 0; i < loopLength;) {
             // The purpose of this loop is to ensure that one character from each selected character type is selected.
-            for(i = i; i < 4;) {
+            for(i = i; i < 3;) {
                 if(sc > -1) {
                     userPassword = userPassword + randomChar;
-                    console.log(userPassword, "Loop 1");
+                    console.log(userPassword, "Loop 1", i);
                     i++;
                 };
                 if(num > -1) {
                     userPassword = userPassword + randomNum;
-                    console.log(userPassword, "Loop 1");
+                    console.log(userPassword, "Loop 1", i);
                     i++;
                 };
                 if(num > -1) {
                     userPassword = userPassword + randomLower;
-                    console.log(userPassword, "Loop 1");
+                    console.log(userPassword, "Loop 1", i);
                     i++;
                 };
             }
+
+            if(sc > -1) {
                 userPassword = userPassword + randomChar;
-                console.log(userPassword, "Loop 2");
+                console.log(userPassword, "Loop 2", i);
+                i++;
+            };
+            if(num > -1) {
+                userPassword = userPassword + randomNum;
+                console.log(userPassword, "Loop 2", i);
+                i++;
+            };
+            if(num > -1) {
+                userPassword = userPassword + randomLower;
+                console.log(userPassword, "Loop 2", i);
+                i++;
+            };
         }
+        console.log("Total loops: ",i);
     }
+
 
     characterSelector();
 // Updated the html of a box (probably a jumbotron) so that the text in said box is the password
