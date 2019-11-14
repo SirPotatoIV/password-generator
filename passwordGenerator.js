@@ -43,10 +43,12 @@ console.log(numCharactersLength, numIndex);
                 if(sc > -1) {
                     userPassword = userPassword + randomChar;
                     console.log(userPassword, "Loop 1");
+                    i++;
                 };
                 if(num > -1) {
                     userPassword = userPassword + randomNum;
                     console.log(userPassword, "Loop 1");
+                    i++;
                 };
             }
                 userPassword = userPassword + randomChar;
