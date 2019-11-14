@@ -26,10 +26,10 @@ console.log(specialCharacters.length, characterIndex);
             // The purpose of this loop is to ensure that one character from each selected character type is selected.
             for(i = i; i < 4; i++) {
                 userPassword = userPassword + randomChar;
-                console.log(userPassword, "Loop 1");
+                // console.log(userPassword, "Loop 1");
             }
                 userPassword = userPassword + randomChar;
-                console.log(userPassword, "Loop 2");
+                // console.log(userPassword, "Loop 2");
         }
     }
 
