@@ -55,25 +55,26 @@ const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', '
     
     function characterSelector() {
         // The purpose of this loop is to combine the user required number of characters into userPassword.
-        for(i = 0; i < loopLength;) {
+        for(i = 0; i < 3;) {
+            if(sc > -1) {
+                userPassword = userPassword + randomChar;
+                console.log(userPassword, "Loop 1", i);
+                i++;
+            };
+            if(num > -1) {
+                userPassword = userPassword + randomNum;
+                console.log(userPassword, "Loop 1", i);
+                i++;
+            };
+            if(num > -1) {
+                userPassword = userPassword + randomLower;
+                console.log(userPassword, "Loop 1", i);
+                i++;
+            };
+        }
+
+        for(i = i; i < loopLength;) {
             // The purpose of this loop is to ensure that one character from each selected character type is selected.
-            for(i = i; i < 3;) {
-                if(sc > -1) {
-                    userPassword = userPassword + randomChar;
-                    console.log(userPassword, "Loop 1", i);
-                    i++;
-                };
-                if(num > -1) {
-                    userPassword = userPassword + randomNum;
-                    console.log(userPassword, "Loop 1", i);
-                    i++;
-                };
-                if(num > -1) {
-                    userPassword = userPassword + randomLower;
-                    console.log(userPassword, "Loop 1", i);
-                    i++;
-                };
-            }
 
             if(sc > -1) {
                 userPassword = userPassword + randomChar;
