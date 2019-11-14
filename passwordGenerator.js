@@ -15,8 +15,12 @@
     function characterSelector() {
         
         for(i = 0; i < passwordLength; i++) {
-            userPassword = userPassword + randomChar;
-            console.log(userPassword);
+            for(i = i; i < 4; i++) {
+                userPassword = userPassword + randomChar;
+                console.log(userPassword, "Loop 1");
+            }
+                userPassword = userPassword + randomChar;
+                console.log(userPassword, "Loop 2");
         }
     }
 
