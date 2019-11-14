@@ -109,6 +109,8 @@ const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', '
             // Creates a random index location for upperCharacters
             const upperIndex = Math.floor(Math.random()*upperCharactersLength);
             // console.log(upperCharactersLength, upperIndex);
+            // Used to randomly select a number between 0-3 to randomly select from the arrays
+            let rand = Math.floor(Math.random()*4);
 
             let randomChar = specialCharacters[specialIndex];
             console.log("Random special Character: ", randomChar);
@@ -118,23 +120,23 @@ const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', '
             console.log("Random number Character:", randomLower);
             let randomUpper = upperCharacters[upperIndex];
             console.log("Random number Character:", randomUpper);
-            
-            if(sc > -1 && i < loopLength) {
+
+            if(sc > -1 && i < loopLength && rand === 0) {
                 userPassword = userPassword + randomChar;
                 console.log(userPassword, "Loop", i);
                 i++;
             };
-            if(num > -1 && i < loopLength) {
+            if(num > -1 && i < loopLength && rand === 1) {
                 userPassword = userPassword + randomNum;
                 console.log(userPassword, "Loop", i);
                 i++;
             };
-            if(low > -1 && i < loopLength) {
+            if(low > -1 && i < loopLength && rand === 2) {
                 userPassword = userPassword + randomLower;
                 console.log(userPassword, "Loop", i);
                 i++;
             };
-            if(up > -1 && i < loopLength) {
+            if(up > -1 && i < loopLength && rand === 3) {
                 userPassword = userPassword + randomUpper;
                 console.log(userPassword, "Loop", i);
                 i++;
