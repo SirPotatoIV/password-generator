@@ -1,0 +1,1 @@
+// Purpose of script is to test code before adding to passwordGenerator.js
