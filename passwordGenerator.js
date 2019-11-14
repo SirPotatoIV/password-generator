@@ -62,6 +62,8 @@ const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', '
     console.log("Does user want a number character?: ", num)
     let low = selectedCharTypes.indexOf("lowerCharacters");
     console.log("Does user want a lower character?: ", low)
+    let up = selectedCharTypes.indexOf("upperCharacters")
+    console.log("Does user want an upper character?: ", up);
     
     function characterSelector() {
         // The purpose of these ifs is to ensure that one character from each selected character type is selected.
