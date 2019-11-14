@@ -30,9 +30,9 @@ console.log(numCharactersLength, numIndex);
     let randomNum = numCharacters[numIndex];
     console.log("Random number Character:", randomNum);
     // Used to see if specialCharacters is a character type picked by the user. Used in the function characterSelector.
-    sc = selectedCharTypes.indexOf("specialCharacters");
+    let sc = selectedCharTypes.indexOf("specialCharacters");
     console.log("Does user want a special character?: ", sc);
-    num = selectedCharTypes.indexOf("numCharacters");
+    let num = selectedCharTypes.indexOf("numCharacters");
     console.log("Does user want a number character?: ", num)
     
     function characterSelector() {
