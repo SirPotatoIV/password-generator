@@ -1,6 +1,16 @@
-// Purpose of script is to test code before adding to passwordGenerator.js
+sliderEl = document.getElementById('formControlRange');
+console.log(sliderEl)
+sliderDisplayEl = document.getElementById('sliderDisplay');
+console.log(sliderDisplayEl);
+// passwordLength = sliderEl.value;
+passwordLength = "9"
+console.log(passwordLength);
+passwordString = passwordLength.valueOf(); 
 
-let selectedCharTypes = [""];
-console.log(selectedCharTypes)
-let arrayLocation = selectedCharTypes.length - 1;
-console.log(arrayLocation)
+function changeSlider() {
+    sliderDisplayEl.innerHTML = sliderEl.value;
+}
+
+sliderEl.addEventListener("click", function(){
+    changeSlider();
+})
