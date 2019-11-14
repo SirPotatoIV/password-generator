@@ -1,5 +1,5 @@
 // Define all possible characters that can be used in the password. Separate the characters in arrays by option types the user will get.
-const characterArrays = ["specialCharacters", "numCharacters",];
+// APPEARS THAT THIS STRATEGY WON'T WORK const characterArrays = ["specialCharacters", "numCharacters",];
 const specialCharacters = ["!", "#", "$", "+", "?", "@", "%",];
 const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
 // Define a const for each character type that will store the users criteria
@@ -7,7 +7,8 @@ const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
     // Validate that the user has selected at least one character type.
 // Create a let that will be a random index selector to select one of the character arrays.
 // Create a let that will be a random selector for a character in the randomly selected array.
-const arraySelector = characterArrays[0];
+// APPEARS THAT THIS STRATEGY WON'T WORK const arraySelector = characterArrays[0];
+// console.log(arraySelector);
 const arrayLength = specialCharacters.length;
 const characterIndex = Math.floor(Math.random()*arrayLength);
 console.log(arrayLength, characterIndex);
