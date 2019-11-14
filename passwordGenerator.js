@@ -1,7 +1,7 @@
 // Define all possible characters that can be used in the password. Separate the characters in arrays by option types the user will get.
 // APPEARS THAT THIS STRATEGY WON'T WORK const characterArrays = ["specialCharacters", "numCharacters",];
 // Used to store the names of the character types the user has selected. This will be used to figure out what characters characterSelector should use.
-const selectedCharTypes = ["specialCharacters",];
+const selectedCharTypes = ["specialCharacters", "numCharacters",];
 const specialCharacters = ["!", "#", "$", "+", "?", "@", "%",];
 const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
 // Define a const for each character type that will store the users criteria
@@ -11,9 +11,13 @@ const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
 // Create a let that will be a random selector for a character in the randomly selected array.
 // APPEARS THAT THIS STRATEGY WON'T WORK const arraySelector = characterArrays[0];
 // console.log(arraySelector);
-const arrayLength = specialCharacters.length;
-const characterIndex = Math.floor(Math.random()*arrayLength);
-console.log(arrayLength, characterIndex);
+const specialCharactersLength = specialCharacters.length;
+const specialIndex = Math.floor(Math.random()*specialCharactersLength);
+console.log(specialCharactersLength, specialIndex);
+
+const numCharactersLength = numCharacters.length;
+const numIndex = Math.floor(Math.random()*numCharactersLength);
+console.log(numCharactersLength, numIndex);
 
 // Create a let that will store the set of randomly selected characters that will amount to a password.
 // Select characters from arrays and combine them into a password
@@ -21,21 +25,29 @@ console.log(arrayLength, characterIndex);
     // The loop will end when when the length the user selected (should be stored in a const) is reached.
     const passwordLength = 8;
     let userPassword = "";
-    let randomChar = specialCharacters[characterIndex];
-    console.log(randomChar);
+    let randomChar = specialCharacters[specialIndex];
+    console.log("Random special Character: ", randomChar);
+    let randomNum = numCharacters[numIndex];
+    console.log("Random number Character:", randomNum);
     // Used to see if specialCharacters is a character type picked by the user. Used in the function characterSelector.
     sc = selectedCharTypes.indexOf("specialCharacters");
-    console.log(sc);
+    console.log("Does user want a special character?: ", sc);
+    num = selectedCharTypes.indexOf("numCharacters");
+    console.log("Does user want a number character?: ", num)
     
     function characterSelector() {
         // The purpose of this loop is to combine the user required number of characters into userPassword.
         for(i = 0; i < passwordLength; i++) {
             // The purpose of this loop is to ensure that one character from each selected character type is selected.
             for(i = i; i < 4; i++) {
-                if(sc > -1){
+                if(sc > -1) {
                     userPassword = userPassword + randomChar;
                     console.log(userPassword, "Loop 1");
                 };
+                // if(num > -1) {
+                //     userPassword = userPassword + randomChar;
+                //     console.log(userPassword, "Loop 1");
+                // };
             }
                 userPassword = userPassword + randomChar;
                 console.log(userPassword, "Loop 2");
