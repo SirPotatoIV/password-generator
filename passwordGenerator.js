@@ -8,8 +8,9 @@ const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
 // Create a let that will be a random index selector to select one of the character arrays.
 // Create a let that will be a random selector for a character in the randomly selected array.
 const arraySelector = characterArrays[0];
-const characterIndex = Math.floor(Math.random()*specialCharacters.length);
-console.log(specialCharacters.length, characterIndex);
+const arrayLength = specialCharacters.length;
+const characterIndex = Math.floor(Math.random()*arrayLength);
+console.log(arrayLength, characterIndex);
 
 // Create a let that will store the set of randomly selected characters that will amount to a password.
 // Select characters from arrays and combine them into a password
