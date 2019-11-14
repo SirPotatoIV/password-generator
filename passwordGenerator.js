@@ -133,6 +133,12 @@ const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', '
                 console.log(userPassword, "Loop 2", i);
                 i++;
             };
+            if(num > -1 && i < loopLength) {
+                userPassword = userPassword + randomUpper;
+                console.log(userPassword, "Loop 2", i);
+                i++;
+            };
+
         }
         console.log("Total loops: ",i ,"and Password Length: ", userPassword.length);
     }
