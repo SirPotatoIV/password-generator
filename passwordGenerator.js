@@ -1,18 +1,21 @@
 // Define all possible characters that can be used in the password. Separate the characters in arrays by option types the user will get.
-// APPEARS THAT THIS STRATEGY WON'T WORK const characterArrays = ["specialCharacters", "numCharacters",];
-// Used to store the names of the character types the user has selected. This will be used to figure out what characters characterSelector should use.
-const selectedCharTypes = ["specialCharacters", "numCharacters", "lowerCharacters", "upperCharacters"];
 const specialCharacters = ["!", "#", "$", "+", "?", "@", "%",];
 const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
 const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-// Define a const for each character type that will store the users criteria
+
+// Define a const for each requirement the user can select.
+    // Used to store the names of the character types the user has selected. This will be used to figure out what characters characterSelector should use.
+    const selectedCharTypes = ["specialCharacters", "numCharacters", "lowerCharacters", "upperCharacters"];
+    let passwordLength = 10;
+    const loopLength = passwordLength - selectedCharTypes.length;
+    console.log("Calculated Number of Loops", loopLength);
+
 // Get users password criteria and store it in the consts
     // Validate that the user has selected at least one character type.
-// Create a let that will be a random index selector to select one of the character arrays.
-// Create a let that will be a random selector for a character in the randomly selected array.
-// APPEARS THAT THIS STRATEGY WON'T WORK const arraySelector = characterArrays[0];
-// console.log(arraySelector);
+    
+    // STILL NEEDS TO BE CODED!!!!!
+
 
 // Create a let that will store the set of randomly selected characters that will amount to a password.
     // Finds the length of the array specialCharacters
@@ -39,14 +42,6 @@ const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', '
     const upperIndex = Math.floor(Math.random()*upperCharactersLength);
     // console.log(upperCharactersLength, upperIndex);
 
-
-// Select characters from arrays and combine them into a password
-    // Use a loop to continue selecting characters from different arrays at random and updating the let password.
-    // The loop will end when when the length the user selected (should be stored in a const) is reached.
-    let passwordLength = 10;
-    const loopLength = passwordLength - selectedCharTypes.length;
-    console.log("Calculated Number of Loops", loopLength);
-    let userPassword = "";
     let randomChar = specialCharacters[specialIndex];
     console.log("Random special Character: ", randomChar);
     let randomNum = numCharacters[numIndex];
@@ -55,6 +50,7 @@ const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', '
     console.log("Random number Character:", randomLower);
     let randomUpper = upperCharacters[upperIndex];
     console.log("Random number Character:", randomUpper);
+    
     // Used to see if specialCharacters is a character type picked by the user. Used in the function characterSelector.
     let sc = selectedCharTypes.indexOf("specialCharacters");
     console.log("Does user want a special character?: ", sc);
@@ -64,6 +60,11 @@ const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', '
     console.log("Does user want a lower character?: ", low)
     let up = selectedCharTypes.indexOf("upperCharacters")
     console.log("Does user want an upper character?: ", up);
+    
+// Select characters from arrays and combine them into a password
+    // Use a loop to continue selecting characters from different arrays at random and updating the let password.
+    // The loop will end when when the length the user selected (should be stored in a const) is reached.
+    let userPassword = "";
     
     function characterSelector() {
         // The purpose of these ifs is to ensure that one character from each selected character type is selected.
