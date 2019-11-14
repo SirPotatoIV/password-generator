@@ -54,8 +54,7 @@ const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', '
     console.log("Does user want a lower character?: ", low)
     
     function characterSelector() {
-        // The purpose of this loop is to combine the user required number of characters into userPassword.
-
+        // The purpose of these ifs is to ensure that one character from each selected character type is selected.
         if(sc > -1) {
             userPassword = userPassword + randomChar;
             console.log(userPassword, "if");
@@ -71,9 +70,32 @@ const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', '
             console.log(userPassword, "if");
             // i++;
         };
-
+        // The purpose of this loop is to combine the user required number of characters into userPassword.
         for(i = 0; i < loopLength;) {
-            // The purpose of this loop is to ensure that one character from each selected character type is selected.
+            // Finds the length of the array specialCharacters
+            const specialCharactersLength = specialCharacters.length;
+            // Creates a random index location for specialCharacters
+            const specialIndex = Math.floor(Math.random()*specialCharactersLength);
+            // console.log(specialCharactersLength, specialIndex);
+
+            // Finds the length of the array numCharacters
+            const numCharactersLength = numCharacters.length;
+            // Creates a random index location for numCharacters
+            const numIndex = Math.floor(Math.random()*numCharactersLength);
+            // console.log(numCharactersLength, numIndex);
+
+            // Finds the length of the array lowerCharacters
+            const lowerCharactersLength = lowerCharacters.length;
+            // Creates a random index location for lowerCharacters
+            const lowerIndex = Math.floor(Math.random()*lowerCharactersLength);
+            // console.log(lowerCharactersLength, lowerIndex);
+
+            let randomChar = specialCharacters[specialIndex];
+            console.log("Random special Character: ", randomChar);
+            let randomNum = numCharacters[numIndex];
+            console.log("Random number Character:", randomNum);
+            let randomLower = lowerCharacters[lowerIndex];
+            console.log("Random number Character:", randomLower);
 
             if(sc > -1 && i < loopLength) {
                 userPassword = userPassword + randomChar;
