@@ -31,6 +31,7 @@ const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', '
     // Creates a random index location for lowerCharacters
     const lowerIndex = Math.floor(Math.random()*lowerCharactersLength);
     console.log(lowerCharactersLength, lowerIndex);
+
 // Select characters from arrays and combine them into a password
     // Use a loop to continue selecting characters from different arrays at random and updating the let password.
     // The loop will end when when the length the user selected (should be stored in a const) is reached.
@@ -45,6 +46,8 @@ const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', '
     console.log("Does user want a special character?: ", sc);
     let num = selectedCharTypes.indexOf("numCharacters");
     console.log("Does user want a number character?: ", num)
+    let low = selectedCharTypes.indexOf("lowerCharacters");
+    console.log("Does user want a lower character?: ", low)
     
     function characterSelector() {
         // The purpose of this loop is to combine the user required number of characters into userPassword.
