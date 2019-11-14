@@ -1,5 +1,6 @@
 // Define all possible characters that can be used in the password. Separate the characters in arrays by option types the user will get.
 const specialCharacters = ["!", "#", "$", "+", "?", "@", "%",];
+const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
 // Define a const for each character type that will store the users criteria
 // Get users password criteria and store it in the consts
     // Validate that the user has selected at least one character type.
