@@ -225,7 +225,7 @@ function characterSelector() {
             userMessageEl.innerHTML = userPassword;
         }
         console.log("Password: ", userPassword, "Total loops: ",i , "Password Length: ", userPassword.length,  "userLength: ", userLength);
-        
+        navigator.clipboard.writeText(userPassword);
     } 
     // characterSelector();
 }  
