@@ -5,13 +5,13 @@ This repository is for creating a password generator. This is for the 3rd homewo
 
 ## Images
 Starting View
-[./assets/start-view.png]
+![Starting View](./assets/start-view.png)
 
 Password Generation Example
-[./assets/password-example.png]
+![Password Generation Example](./assets/password-example.png)
 
 Error Message Example
-[error-message.png]
+![Error Message Example](./assets/error-message.png)
 
 ## Installation 
 If all files are kept in a single folder a web browser should be able to run the project and you have an internet connection.
