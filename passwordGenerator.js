@@ -6,6 +6,12 @@ function passwordGenerator() {
         characterSelector();
     })
 
+    let copyButtonEl = document.getElementById('copyButton');
+    
+    // passwordButtonEl.addEventListener("click", function(){
+    //     navigator.clipboard.writeText(userPassword);
+    // })
+
     let sliderEl = document.getElementById('formControlRange');
     console.log(sliderEl)
     let sliderDisplayEl = document.getElementById('sliderDisplay');
@@ -142,11 +148,6 @@ function characterSelector() {
     // Use a loop to continue selecting characters from different arrays at random and updating the let password.
     // The loop will end when when the length the user selected (should be stored in a const) is reached.
     
- 
-    
-    
-    
-    
         let userPassword = "";
         // The purpose of these ifs is to ensure that one character from each selected character type is selected.
         if(sc > -1) {
@@ -225,7 +226,14 @@ function characterSelector() {
             userMessageEl.innerHTML = userPassword;
         }
         console.log("Password: ", userPassword, "Total loops: ",i , "Password Length: ", userPassword.length,  "userLength: ", userLength);
+        // navigator.clipboard.writeText(userPassword);
+        let copyButtonEl = document.getElementById('copyButton');
         navigator.clipboard.writeText(userPassword);
+        // copyButtonEl.addEventListener("click", function {
+        //     navigator.clipboard.writeText(userPassword);
+        // })
+        
+            
     } 
     // characterSelector();
 }  
