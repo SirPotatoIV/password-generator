@@ -113,6 +113,13 @@ function passwordGenerator() {
 // Select characters from arrays and combine them into a password
     // Use a loop to continue selecting characters from different arrays at random and updating the let password.
     // The loop will end when when the length the user selected (should be stored in a const) is reached.
+    
+    let passwordButtonEl = document.getElementById('passwordButton');
+    
+    passwordButtonEl.addEventListener("click", function(){
+        characterSelector();
+    })
+    
     let userPassword = "";
     
     function characterSelector() {
@@ -193,6 +200,7 @@ function passwordGenerator() {
 
         }
         console.log("Password: ", userPassword, "Total loops: ",i , "Password Length: ", userPassword.length);
-    } characterSelector();
+    } 
+    // characterSelector();
 }  
 passwordGenerator();
