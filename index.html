@@ -9,56 +9,78 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    <!-- https://getbootstrap.com/docs/4.3/components/forms/#range-inputs -->
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range -->
-    <form>
-      <div class="form-group">
-        <label for="formControlRange">
-          
-          Password Length: <p id="sliderDisplay"></p>
+    
+    <div class="container">
+        <div class="row mb-2">
+          <div class="col-12 text-center bg-dark">
+            <h1 class="text-light">Password Generator</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class = "col-12 text-center">
+          <!-- https://getbootstrap.com/docs/4.3/components/forms/#range-inputs -->
+          <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range -->
+            <form>
+                <div class="form-group">
+                  <label class="" for="formControlRange">Password Length</label>
+                  <div>
+                    <input type="range" class="form-control-range" id="formControlRange" min="8" max="128">
+                  </div>
+                </div>
+            </form>
+            <p id="sliderDisplay"></p>
+          </div>
+        </div>
 
-        </label>
-        <input type="range" id="formControlRange" min="8" max="128">
-      </div>
-    </form>
-    <!-- https://getbootstrap.com/docs/4.0/components/input-group/#checkboxes-and-radios -->
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="specialCharCheck">
-      <label class="form-check-label" for="specialCharCheck">
-        Special Characters
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="numCharCheck">
-      <label class="form-check-label" for="numCharCheck">
-        Number Characters
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="lowCharCheck">
-      <label class="form-check-label" for="lowCharCheck">
-        Lowercase Characters
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="upCharCheck">
-      <label class="form-check-label" for="upCharCheck">
-        Uppercase Characters
-      </label>
-    </div>
+        <div class="row justify-content-center">
+          <div class = col-auto>
+            <!-- Empty col -->
+          </div>
+          <div class= "col-6 text-justify">
+            <!-- https://getbootstrap.com/docs/4.0/components/input-group/#checkboxes-and-radios -->
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="specialCharCheck">
+              <label class="form-check-label" for="specialCharCheck">
+                Special Characters
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="numCharCheck">
+              <label class="form-check-label" for="numCharCheck">
+                Number Characters
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="lowCharCheck">
+              <label class="form-check-label" for="lowCharCheck">
+                Lowercase Characters
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="upCharCheck">
+              <label class="form-check-label" for="upCharCheck">
+                Uppercase Characters
+              </label>
+            </div>
+          </div>
+          <div class = "col-auto">
 
-    <button type="button" class="btn btn-primary btn-lg btn-block" id="passwordButton">Generate Password</button>
-    <!-- https://getbootstrap.com/docs/4.0/components/jumbotron/ -->
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <p class="lead" id="userMessage"></p>
-      </div>
+          </div>
+        </div>
+          <button type="button" class="btn btn-primary btn-lg btn-block my-3" id="passwordButton">Generate Password</button>
+          <!-- https://getbootstrap.com/docs/4.0/components/jumbotron/ -->
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container text-center">
+              <p class="lead" id="userMessage"></p>
+            </div>
+          </div>
+          <button type="button" class="btn btn-success btn-lg btn-block" id="copyButton">Copy Password</button>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="./passwordGenerator.js"></script>
-    <button type="button" class="btn btn-success btn-lg btn-block" id="copyButton">Copy Password</button>
+    
 
   </body>
 </html>

@@ -226,15 +226,11 @@ function characterSelector() {
             userMessageEl.innerHTML = userPassword;
         }
         console.log("Password: ", userPassword, "Total loops: ",i , "Password Length: ", userPassword.length,  "userLength: ", userLength);
-        // navigator.clipboard.writeText(userPassword);
+        // https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText
         let copyButtonEl = document.getElementById('copyButton');
-        navigator.clipboard.writeText(userPassword);
-        // copyButtonEl.addEventListener("click", function {
-        //     navigator.clipboard.writeText(userPassword);
-        // })
-        
+        navigator.clipboard.writeText(userPassword);     
             
     } 
-    // characterSelector();
+   
 }  
 passwordGenerator();
