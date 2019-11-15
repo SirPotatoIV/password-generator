@@ -1,4 +1,23 @@
 function passwordGenerator() {
+
+// Code used below to next comment is used to get the value of the slider for the password length and update the doc to show the selected length.
+    let sliderEl = document.getElementById('formControlRange');
+    console.log(sliderEl)
+    let sliderDisplayEl = document.getElementById('sliderDisplay');
+    console.log(sliderDisplayEl);
+    let passwordLength = sliderEl.value;
+    // https://www.java67.com/2012/10/best-way-to-convert-numbers-to-string-in-java-example.html
+    passwordString = passwordLength.valueOf();
+    sliderDisplayEl.innerHTML = sliderEl.value;
+
+    function changeSlider() {
+        sliderDisplayEl.innerHTML = sliderEl.value;
+    }
+
+    sliderEl.addEventListener("click", function(){
+        changeSlider();
+    })
+       
 // Define all possible characters that can be used in the password. Separate the characters in arrays by option types the user will get.
     const specialCharacters = ["!", "#", "$", "+", "?", "@", "%",];
     const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
@@ -11,7 +30,7 @@ function passwordGenerator() {
     const hasNum = true;
     const hasLower = true;
     const hasUpper = true;
-    let userLength = 8;
+    let userLength = sliderEl.value;
     let arrayLocation = selectedCharTypes.length - 1;
 
     if (hasSpecial === true) {
@@ -174,28 +193,6 @@ function passwordGenerator() {
 
         }
         console.log("Password: ", userPassword, "Total loops: ",i , "Password Length: ", userPassword.length);
-    }
-    
-    characterSelector();
-
-    sliderEl = document.getElementById('formControlRange');
-    console.log(sliderEl)
-    sliderDisplayEl = document.getElementById('sliderDisplay');
-    console.log(sliderDisplayEl);
-    passwordLength = sliderEl.value;
-    // passwordLength = "9"
-    // console.log(passwordLength);
-    // https://www.java67.com/2012/10/best-way-to-convert-numbers-to-string-in-java-example.html
-    passwordString = passwordLength.valueOf();
-    sliderDisplayEl.innerHTML = sliderEl.value;
-
-
-    function changeSlider() {
-        sliderDisplayEl.innerHTML = sliderEl.value;
-    }
-
-    sliderEl.addEventListener("click", function(){
-        changeSlider();
-    })
-}
+    } characterSelector();
+}  
 passwordGenerator();
