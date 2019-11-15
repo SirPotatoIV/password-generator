@@ -1,11 +1,12 @@
+function passwordGenerator() {
 // Define all possible characters that can be used in the password. Separate the characters in arrays by option types the user will get.
-const specialCharacters = ["!", "#", "$", "+", "?", "@", "%",];
-const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
-const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    const specialCharacters = ["!", "#", "$", "+", "?", "@", "%",];
+    const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
+    const lowerCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
 // Define a const for each requirement the user can select.
-    let selectedCharTypes = [""];
+    let selectedCharTypes = [];
     const hasSpecial = true;
     const hasNum = true;
     const hasLower = true;
@@ -36,7 +37,7 @@ const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', '
 
     // Used to store the names of the character types the user has selected. This will be used to figure out what characters characterSelector should use.
     // const selectedCharTypes = ["specialCharacters", "numCharacters", "lowerCharacters", "upperCharacters"];
-    let passwordLength = userLength;
+    // let passwordLength = userLength;
     const loopLength = userLength - selectedCharTypes.length;
     console.log("Calculated Number of Loops", loopLength);
 
@@ -176,3 +177,5 @@ const upperCharacters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H','I', 'J', 'K', '
     }
     
     characterSelector();
+}
+passwordGenerator();

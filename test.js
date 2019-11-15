@@ -6,7 +6,9 @@ passwordLength = sliderEl.value;
 // passwordLength = "9"
 // console.log(passwordLength);
 // https://www.java67.com/2012/10/best-way-to-convert-numbers-to-string-in-java-example.html
-passwordString = passwordLength.valueOf(); 
+passwordString = passwordLength.valueOf();
+sliderDisplayEl.innerHTML = sliderEl.value;
+
 
 function changeSlider() {
     sliderDisplayEl.innerHTML = sliderEl.value;
