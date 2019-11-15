@@ -16,7 +16,14 @@ function passwordGenerator() {
     console.log(sliderEl)
     let sliderDisplayEl = document.getElementById('sliderDisplay');
     console.log(sliderDisplayEl);
-    let passwordLength = sliderEl.value;
+    sliderDisplayEl.innerHTML = sliderEl.value;
+    sliderEl.addEventListener("click", function(){
+        changeSlider();
+    })
+    function changeSlider() {
+        sliderDisplayEl.innerHTML = sliderEl.value;
+    }
+    
 // Code used below to next comment is used to get the value of the slider for the password length and update the doc to show the selected length.
 function characterSelector() {
     let sliderEl = document.getElementById('formControlRange');
@@ -28,13 +35,6 @@ function characterSelector() {
     passwordString = passwordLength.valueOf();
     sliderDisplayEl.innerHTML = sliderEl.value;
 
-    function changeSlider() {
-        sliderDisplayEl.innerHTML = sliderEl.value;
-    }
-
-    sliderEl.addEventListener("click", function(){
-        changeSlider();
-    })
     let userMessageEl = document.getElementById('userMessage');
     let specialCharactersEl = document.getElementById('specialCharCheck')
     let numCharactersEl = document.getElementById('numCharCheck')
