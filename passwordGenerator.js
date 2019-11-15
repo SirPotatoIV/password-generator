@@ -19,9 +19,9 @@ function passwordGenerator() {
     })
     
     let specialCharactersEl = document.getElementById('specialCharacters')
-    console.log(specialCharactersEl)
-    let testSpecial = specialCharactersEl.checked;
-    console.log("Value of Spec Char radio button: ", testSpecial);
+    // console.log(specialCharactersEl)
+    // let testSpecial = specialCharactersEl.checked;
+    // console.log("Value of Spec Char radio button: ", testSpecial);
 // Define all possible characters that can be used in the password. Separate the characters in arrays by option types the user will get.
     const specialCharacters = ["!", "#", "$", "+", "?", "@", "%",];
     const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
@@ -30,7 +30,7 @@ function passwordGenerator() {
 
 // Define a const for each requirement the user can select.
     let selectedCharTypes = [];
-    const hasSpecial = true;
+    const hasSpecial = specialCharactersEl.checked;
     const hasNum = true;
     const hasLower = true;
     const hasUpper = true;
@@ -42,17 +42,17 @@ function passwordGenerator() {
         selectedCharTypes[arrayLocation] = "specialCharacters";
     }
     // console.log("Character types selected: ", selectedCharTypes);
-    if (hasSpecial === true) {
+    if (hasNum === true) {
         arrayLocation = selectedCharTypes.length
         selectedCharTypes[arrayLocation] = "numCharacters";
     }
     // console.log("Character types selected: ", selectedCharTypes);
-    if (hasSpecial === true) {
+    if (hasLower === true) {
         arrayLocation = selectedCharTypes.length
         selectedCharTypes[arrayLocation] = "lowerCharacters";
     }
     // console.log("Character types selected: ", selectedCharTypes);
-    if (hasSpecial === true) {
+    if (hasUpper === true) {
         arrayLocation = selectedCharTypes.length
         selectedCharTypes[arrayLocation] = "upperCharacters";
     }
