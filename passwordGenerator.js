@@ -222,9 +222,10 @@ function characterSelector() {
                 // console.log(userPassword, "Loop", i);
                 i++;
             };
-
+            userMessageEl.innerHTML = userPassword;
         }
         console.log("Password: ", userPassword, "Total loops: ",i , "Password Length: ", userPassword.length,  "userLength: ", userLength);
+        
     } 
     // characterSelector();
 }  
