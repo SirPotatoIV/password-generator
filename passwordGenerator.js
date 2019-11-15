@@ -48,28 +48,36 @@ function characterSelector() {
     const hasSpecial = specialCharactersEl.checked;
     const hasNum = numCharactersEl.checked;
     const hasLower = lowCharactersEl.checked;
-    const hasUpper = true;
+    const hasUpper = upCharactersEl.checked;
     let userLength = sliderEl.value;
     let arrayLocation = selectedCharTypes.length - 1;
+    let selectCheck = 0;
 
     if (hasSpecial === true) {
         arrayLocation = selectedCharTypes.length
         selectedCharTypes[arrayLocation] = "specialCharacters";
+        selectCheck++
     }
     // console.log("Character types selected: ", selectedCharTypes);
     if (hasNum === true) {
         arrayLocation = selectedCharTypes.length
         selectedCharTypes[arrayLocation] = "numCharacters";
+        selectCheck++
     }
     // console.log("Character types selected: ", selectedCharTypes);
     if (hasLower === true) {
         arrayLocation = selectedCharTypes.length
         selectedCharTypes[arrayLocation] = "lowerCharacters";
+        selectCheck++
     }
     // console.log("Character types selected: ", selectedCharTypes);
     if (hasUpper === true) {
         arrayLocation = selectedCharTypes.length
         selectedCharTypes[arrayLocation] = "upperCharacters";
+        selectCheck++
+    }
+    if (selectCheck === 0){
+        return
     }
     console.log("Character types selected: ", selectedCharTypes);
 
