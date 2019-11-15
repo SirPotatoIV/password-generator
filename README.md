@@ -4,13 +4,16 @@
 This repository is for creating a password generator. This is for the 3rd homework assignment in my web development class. This password generator can create a randomly generated password from 8-128 characters long. The user has the ability to select what character types to include. If the user does not select any types of characters they will recieve a message to indicate the error. User can continue to generate random passwords. user can copy the generated password.
 
 ## Images
-Starting View
+Starting View:
+
 ![Starting View](./assets/start-view.png)
 
-Password Generation Example
+Password Generation Example:
+
 ![Password Generation Example](./assets/password-example.png)
 
-Error Message Example
+Error Message Example:
+
 ![Error Message Example](./assets/error-message.png)
 
 ## Installation 
