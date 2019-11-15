@@ -9,17 +9,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-    
+    <!-- Main container that holds all the user input options -->
     <div class="container">
         <div class="row mb-2">
-          <div class="col-12 text-center bg-dark">
+          <!-- Title of the website -->
+          <header class="col-12 text-center bg-dark">
             <h1 class="text-light">Password Generator</h1>
-          </div>
+          </header>
         </div>
         <div class="row">
           <div class = "col-12 text-center">
           <!-- https://getbootstrap.com/docs/4.3/components/forms/#range-inputs -->
           <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range -->
+          <!-- Range selector used to get the users desired password length -->
             <form>
                 <div class="form-group">
                   <label class="" for="formControlRange">Password Length</label>
@@ -38,6 +40,7 @@
           </div>
           <div class= "col-6 text-justify">
             <!-- https://getbootstrap.com/docs/4.0/components/input-group/#checkboxes-and-radios -->
+            <!-- Checkboxes used to figure out what types of characters the user wants -->
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="specialCharCheck">
               <label class="form-check-label" for="specialCharCheck">
@@ -67,13 +70,16 @@
 
           </div>
         </div>
+          <!-- Button used to start the correct function that generates a random password based on the users requirements. -->
           <button type="button" class="btn btn-primary btn-lg btn-block my-3" id="passwordButton">Generate Password</button>
           <!-- https://getbootstrap.com/docs/4.0/components/jumbotron/ -->
+          <!-- Used to display an error message to the user and the generated password -->
           <div class="jumbotron jumbotron-fluid">
             <div class="container text-center">
               <p class="lead" id="userMessage"></p>
             </div>
           </div>
+          <!-- Button used to copy the generated password to the clipboard. -->
           <button type="button" class="btn btn-success btn-lg btn-block" id="copyButton">Copy Password</button>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
