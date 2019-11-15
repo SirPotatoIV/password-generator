@@ -1,6 +1,18 @@
 function passwordGenerator() {
+    
+    let passwordButtonEl = document.getElementById('passwordButton');
+    
+    passwordButtonEl.addEventListener("click", function(){
+        characterSelector();
+    })
 
+    let sliderEl = document.getElementById('formControlRange');
+    console.log(sliderEl)
+    let sliderDisplayEl = document.getElementById('sliderDisplay');
+    console.log(sliderDisplayEl);
+    let passwordLength = sliderEl.value;
 // Code used below to next comment is used to get the value of the slider for the password length and update the doc to show the selected length.
+function characterSelector() {
     let sliderEl = document.getElementById('formControlRange');
     console.log(sliderEl)
     let sliderDisplayEl = document.getElementById('sliderDisplay');
@@ -121,15 +133,11 @@ function passwordGenerator() {
     // Use a loop to continue selecting characters from different arrays at random and updating the let password.
     // The loop will end when when the length the user selected (should be stored in a const) is reached.
     
-    let passwordButtonEl = document.getElementById('passwordButton');
-    
-    passwordButtonEl.addEventListener("click", function(){
-        characterSelector();
-    })
+ 
     
     
     
-    function characterSelector() {
+    
         let userPassword = "";
         // The purpose of these ifs is to ensure that one character from each selected character type is selected.
         if(sc > -1) {
