@@ -14,9 +14,9 @@ function passwordGenerator() {
 // Code used below to next comment is used to get the value of the slider for the password length and update the doc to show the selected length.
 function characterSelector() {
     let sliderEl = document.getElementById('formControlRange');
-    console.log(sliderEl)
+    // console.log(sliderEl)
     let sliderDisplayEl = document.getElementById('sliderDisplay');
-    console.log(sliderDisplayEl);
+    // console.log(sliderDisplayEl);
     let passwordLength = sliderEl.value;
     // https://www.java67.com/2012/10/best-way-to-convert-numbers-to-string-in-java-example.html
     passwordString = passwordLength.valueOf();
@@ -29,7 +29,7 @@ function characterSelector() {
     sliderEl.addEventListener("click", function(){
         changeSlider();
     })
-    
+    let userMessageEl = document.getElementById('userMessage');
     let specialCharactersEl = document.getElementById('specialCharCheck')
     let numCharactersEl = document.getElementById('numCharCheck')
     let lowCharactersEl = document.getElementById('lowCharCheck')
@@ -77,6 +77,7 @@ function characterSelector() {
         selectCheck++
     }
     if (selectCheck === 0){
+        userMessageEl.innerHTML = "You need to select at least one character type ya dingus!"
         return
     }
     console.log("Character types selected: ", selectedCharTypes);
