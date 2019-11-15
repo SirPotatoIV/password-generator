@@ -18,7 +18,10 @@ function passwordGenerator() {
         changeSlider();
     })
     
-    let specialCharactersEl = document.getElementById('specialCharacters')
+    let specialCharactersEl = document.getElementById('specialCharCheck')
+    let numCharactersEl = document.getElementById('numCharCheck')
+    let lowCharactersEl = document.getElementById('lowCharCheck')
+    let upCharactersEl = document.getElementById('upCharCheck')
     // console.log(specialCharactersEl)
     // let testSpecial = specialCharactersEl.checked;
     // console.log("Value of Spec Char radio button: ", testSpecial);
@@ -31,8 +34,8 @@ function passwordGenerator() {
 // Define a const for each requirement the user can select.
     let selectedCharTypes = [];
     const hasSpecial = specialCharactersEl.checked;
-    const hasNum = true;
-    const hasLower = true;
+    const hasNum = numCharactersEl.checked;
+    const hasLower = lowCharactersEl.checked;
     const hasUpper = true;
     let userLength = sliderEl.value;
     let arrayLocation = selectedCharTypes.length - 1;
