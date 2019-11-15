@@ -17,7 +17,11 @@ function passwordGenerator() {
     sliderEl.addEventListener("click", function(){
         changeSlider();
     })
-       
+    
+    let specialCharactersEl = document.getElementById('specialCharacters')
+    console.log(specialCharactersEl)
+    let testSpecial = specialCharactersEl.checked;
+    console.log("Value of Spec Char radio button: ", testSpecial);
 // Define all possible characters that can be used in the password. Separate the characters in arrays by option types the user will get.
     const specialCharacters = ["!", "#", "$", "+", "?", "@", "%",];
     const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
@@ -37,17 +41,17 @@ function passwordGenerator() {
         arrayLocation = selectedCharTypes.length
         selectedCharTypes[arrayLocation] = "specialCharacters";
     }
-    console.log("Character types selected: ", selectedCharTypes);
+    // console.log("Character types selected: ", selectedCharTypes);
     if (hasSpecial === true) {
         arrayLocation = selectedCharTypes.length
         selectedCharTypes[arrayLocation] = "numCharacters";
     }
-    console.log("Character types selected: ", selectedCharTypes);
+    // console.log("Character types selected: ", selectedCharTypes);
     if (hasSpecial === true) {
         arrayLocation = selectedCharTypes.length
         selectedCharTypes[arrayLocation] = "lowerCharacters";
     }
-    console.log("Character types selected: ", selectedCharTypes);
+    // console.log("Character types selected: ", selectedCharTypes);
     if (hasSpecial === true) {
         arrayLocation = selectedCharTypes.length
         selectedCharTypes[arrayLocation] = "upperCharacters";
