@@ -124,9 +124,10 @@ function passwordGenerator() {
         characterSelector();
     })
     
-    let userPassword = "";
+    
     
     function characterSelector() {
+        let userPassword = "";
         // The purpose of these ifs is to ensure that one character from each selected character type is selected.
         if(sc > -1) {
             userPassword = userPassword + randomChar;
@@ -203,7 +204,7 @@ function passwordGenerator() {
             };
 
         }
-        console.log("Password: ", userPassword, "Total loops: ",i , "Password Length: ", userPassword.length);
+        console.log("Password: ", userPassword, "Total loops: ",i , "Password Length: ", userPassword.length,  "userLength: ", userLength);
     } 
     // characterSelector();
 }  
