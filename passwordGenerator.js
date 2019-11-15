@@ -7,15 +7,11 @@ function passwordGenerator() {
     })
 
     let copyButtonEl = document.getElementById('copyButton');
-    
-    // passwordButtonEl.addEventListener("click", function(){
-    //     navigator.clipboard.writeText(userPassword);
-    // })
 
     let sliderEl = document.getElementById('formControlRange');
-    console.log(sliderEl)
+    // console.log(sliderEl)
     let sliderDisplayEl = document.getElementById('sliderDisplay');
-    console.log(sliderDisplayEl);
+    // console.log(sliderDisplayEl);
     sliderDisplayEl.innerHTML = sliderEl.value;
     sliderEl.addEventListener("click", function(){
         changeSlider();
@@ -40,9 +36,7 @@ function characterSelector() {
     let numCharactersEl = document.getElementById('numCharCheck')
     let lowCharactersEl = document.getElementById('lowCharCheck')
     let upCharactersEl = document.getElementById('upCharCheck')
-    // console.log(specialCharactersEl)
-    // let testSpecial = specialCharactersEl.checked;
-    // console.log("Value of Spec Char radio button: ", testSpecial);
+  
 // Define all possible characters that can be used in the password. Separate the characters in arrays by option types the user will get.
     const specialCharacters = ["!", "#", "$", "+", "?", "@", "%",];
     const numCharacters = ["0","1", "2", "3", "4", "5", "6", "7", "8", "9",];
@@ -59,6 +53,7 @@ function characterSelector() {
     let arrayLocation = selectedCharTypes.length - 1;
     let selectCheck = 0;
 
+// Code below used to figure out all the character types the user has selected and verify that they have selected at least one.
     if (hasSpecial === true) {
         arrayLocation = selectedCharTypes.length
         selectedCharTypes[arrayLocation] = "specialCharacters";
@@ -88,16 +83,8 @@ function characterSelector() {
     }
     console.log("Character types selected: ", selectedCharTypes);
 
-    // Used to store the names of the character types the user has selected. This will be used to figure out what characters characterSelector should use.
-    // const selectedCharTypes = ["specialCharacters", "numCharacters", "lowerCharacters", "upperCharacters"];
-    // let passwordLength = userLength;
     const loopLength = userLength - selectedCharTypes.length;
-    console.log("Calculated Number of Loops", loopLength);
-
-// Get users password criteria and store it in the consts
-    // Validate that the user has selected at least one character type.
-    
-    // STILL NEEDS TO BE CODED!!!!!
+    console.log("Calculated Number of Loops", loopLength)
 
 
 // Create a let that will store the set of randomly selected characters that will amount to a password.
@@ -126,23 +113,23 @@ function characterSelector() {
     // console.log(upperCharactersLength, upperIndex);
 
     let randomChar = specialCharacters[specialIndex];
-    console.log("Random special Character: ", randomChar);
+    // console.log("Random special Character: ", randomChar);
     let randomNum = numCharacters[numIndex];
-    console.log("Random number Character:", randomNum);
+    // console.log("Random number Character:", randomNum);
     let randomLower = lowerCharacters[lowerIndex];
-    console.log("Random number Character:", randomLower);
+    // console.log("Random number Character:", randomLower);
     let randomUpper = upperCharacters[upperIndex];
-    console.log("Random number Character:", randomUpper);
+    // console.log("Random number Character:", randomUpper);
     
-    // Used to see if specialCharacters is a character type picked by the user. Used in the function characterSelector.
+    // Used to see if a character type was picked by the user. Used in the function characterSelector.
     let sc = selectedCharTypes.indexOf("specialCharacters");
-    console.log("Does user want a special character?: ", sc);
+    // console.log("Does user want a special character?: ", sc);
     let num = selectedCharTypes.indexOf("numCharacters");
-    console.log("Does user want a number character?: ", num)
+    // console.log("Does user want a number character?: ", num)
     let low = selectedCharTypes.indexOf("lowerCharacters");
-    console.log("Does user want a lower character?: ", low)
+    // console.log("Does user want a lower character?: ", low)
     let up = selectedCharTypes.indexOf("upperCharacters")
-    console.log("Does user want an upper character?: ", up);
+    // console.log("Does user want an upper character?: ", up);
     
 // Select characters from arrays and combine them into a password
     // Use a loop to continue selecting characters from different arrays at random and updating the let password.
@@ -152,19 +139,19 @@ function characterSelector() {
         // The purpose of these ifs is to ensure that one character from each selected character type is selected.
         if(sc > -1) {
             userPassword = userPassword + randomChar;
-            console.log(userPassword, "if");
+            // console.log(userPassword, "if");
         };
         if(num > -1) {
             userPassword = userPassword + randomNum;
-            console.log(userPassword, "if");
+            // console.log(userPassword, "if");
         };
         if(low > -1) {
             userPassword = userPassword + randomLower;
-            console.log(userPassword, "if");
+            // console.log(userPassword, "if");
         };
         if(up > -1) {
             userPassword = userPassword + randomUpper;
-            console.log(userPassword, "if");
+            // console.log(userPassword, "if");
         };
         // The purpose of this loop is to combine the user required number of characters into userPassword.
         for(i = 0; i < loopLength;) {
