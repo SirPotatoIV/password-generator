@@ -1,7 +1,17 @@
 # Password Generator
 
 ## Description 
-This repository is for creating a password generator. This is for the 3rd homework assignment in my web development class.
+This repository is for creating a password generator. This is for the 3rd homework assignment in my web development class. This password generator can create a randomly generated password from 8-128 characters long. The user has the ability to select what character types to include. If the user does not select any types of characters they will recieve a message to indicate the error. User can continue to generate random passwords. user can copy the generated password.
+
+## Images
+Starting View
+[./assets/start-view.png]
+
+Password Generation Example
+[./assets/password-example.png]
+
+Error Message Example
+[error-message.png]
 
 ## Installation 
 If all files are kept in a single folder a web browser should be able to run the project and you have an internet connection.
@@ -20,3 +30,6 @@ Early on I tried creating an array that included the names of each character arr
 
 ## Live site: 
 https://sirpotatoiv.github.io/password-generator/
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
